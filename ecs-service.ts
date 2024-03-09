@@ -38,13 +38,13 @@ export class EcsServiceStack extends Construct {
     });
 
     // Create an ECS Service
-    this.service = new ecsService.EcsService(this, 'EcsService', {
-      name: 'my-service',
-      cluster: this.cluster.id,
-      desiredCount: 2,
-      launchType: 'FARGATE',
-      taskDefinition: this.taskDefinition.arn,
-    });
+    // this.service = new ecsService.EcsService(this, 'EcsService', {
+    //   name: 'my-service',
+    //   cluster: this.cluster.id,
+    //   desiredCount: 2,
+    //   launchType: 'FARGATE',
+    //   taskDefinition: this.taskDefinition.arn,
+    // });
 
     // Optionally, add more resources like Load Balancer, Target Group, etc.
   }

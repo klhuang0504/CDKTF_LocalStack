@@ -16,7 +16,7 @@ class MyStack extends TerraformStack {
 
     // Create an EC2 Instance
     new Instance(this, "compute", {
-      ami: "ami-01456a894f71116f2",
+      ami: "ami-ff0fea8310f3",
       instanceType: "t2.micro",
     });
   }
