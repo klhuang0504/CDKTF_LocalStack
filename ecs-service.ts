@@ -1,10 +1,10 @@
 import { Construct } from "constructs";
-import { ecsTaskDefinition, ecsService, ecsCluster} from "@cdktf/provider-aws";
+import { ecsTaskDefinition, ecsCluster} from "@cdktf/provider-aws";
 
 export class EcsServiceStack extends Construct {
   public cluster: ecsCluster.EcsCluster
   public taskDefinition: ecsTaskDefinition.EcsTaskDefinition
-  public service: ecsService.EcsService
+  // public service: ecsService.EcsService
 
   constructor(scope: Construct, id: string) {
     super(scope, id);

@@ -4,6 +4,8 @@ import { AwsProvider } from "@cdktf/provider-aws/lib/provider";
 import { App, TerraformStack } from "cdktf";
 import { AWS_CONFIG } from "./localstack-config";
 import { Instance } from "@cdktf/provider-aws/lib/instance";
+import { S3Bucket } from "@cdktf/provider-aws/lib/s3-bucket";
+
 
 
 class MyStack extends TerraformStack {
@@ -18,6 +20,11 @@ class MyStack extends TerraformStack {
     new Instance(this, "compute", {
       ami: "ami-ff0fea8310f3",
       instanceType: "t2.micro",
+    });
+
+    const s3Bucket = new S3Bucket(this, 'MyS3Bucket', {
+      bucket: "my-bucket",
+      // acl: 'private', // Access control, e.g., 'private', 'public-read', etc.
     });
   }
 }
