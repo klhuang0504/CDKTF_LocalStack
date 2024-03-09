@@ -22,7 +22,7 @@ class MyStack extends TerraformStack {
       instanceType: "t2.micro",
     });
 
-    const s3Bucket = new S3Bucket(this, 'MyS3Bucket', {
+    new S3Bucket(this, 'MyS3Bucket', {
       bucket: "my-bucket",
       // acl: 'private', // Access control, e.g., 'private', 'public-read', etc.
     });
