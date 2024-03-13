@@ -30,5 +30,5 @@ class MyStack extends TerraformStack {
 }
 
 const app = new App();
-new MyStack(app, "DigdagOnAws");
+new MyStack(app, "CDKTF_LocalStack");
 app.synth();
