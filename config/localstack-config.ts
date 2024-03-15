@@ -19,6 +19,7 @@ export const AWS_CONFIG = {
       rds: `http://${localstackUrl}:4566`,
       redshift: `http://${localstackUrl}:4566`,
       route53: `http://${localstackUrl}:4566`,
+      // s3: `http://s3.${localstackUrl}.localstack.cloud:4566`,
       s3: "http://s3.localhost.localstack.cloud:4566",
       secretsmanager: `http://${localstackUrl}:4566`,
       ses: `http://${localstackUrl}:4566`,
